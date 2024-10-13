@@ -97,3 +97,15 @@ input[type=date]{
         opacity: 1;
     }
 }
+
+@media (max-width: 750px){
+    .task-info{
+        flex-direction: column-reverse;
+    }
+    input{
+        margin: 0.5rem;
+    }
+    .fa-trash{
+        font-size: 2rem;
+    }
+}

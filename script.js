@@ -36,12 +36,18 @@ function renderTask(array){
         return `
             <div class="task flexbox">
                 <div class="task-info flexbox">
-                    <strong>Completion:</strong>
-                    <input type="checkbox" class="checkbox" ${task.completion ? 'checked' : ""}>
-                    <strong>Date:</strong>
-                    <input type="date" class="task-date" value="${task.date}">
-                    <strong>Task Title:</strong>
-                    <input type="text" class="task-title" value="${task.title}">
+                    <div class="flexbox">
+                        <strong>Completion:</strong>
+                        <input type="checkbox" class="checkbox" ${task.completion ? 'checked' : ""}>
+                    </div>
+                    <div>
+                        <strong>Date:</strong>
+                        <input type="date" class="task-date" value="${task.date}">
+                    </div>
+                    <div>
+                        <strong>Task Title:</strong>
+                        <input type="text" class="task-title" value="${task.title}">
+                    </div>
                     <i class="fa-solid fa-trash" onclick=deleteTask(${array.indexOf(task)})></i>
                 </div>
                 <strong>Task Description: </strong>
